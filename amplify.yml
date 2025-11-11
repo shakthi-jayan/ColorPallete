@@ -3,14 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - echo "No build step needed for static HTML site"
     build:
       commands:
-        - npm run build
+        - echo "Skipping build..."
   artifacts:
-    baseDirectory: dist
+    baseDirectory: .
     files:
       - '**/*'
   cache:
-    paths:
-      - node_modules/**/*
+    paths: []
